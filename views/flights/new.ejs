@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+<h2>Add Flight</h2>
+<form class="gridContainerAddFlight" action="/flights" method="post">
+  <label class="gridContainerAddFlight" for="">Alirline</label>
+  <input
+    class="addFlightInput"
+    type="text"
+    name="airline"
+    placeholder="American / Southwest /  United"
+  />
+
+  <label>Airport</label>
+  <select name="airport">
+    <option value="AUS" selected>AUS</option>
+    <option value="DEN">DFW</option>
+    <option value="DEN">DEN</option>
+    <option value="DEN">LAX</option>
+  </select>
+
+  <label for="">Flight Nunmber</label>
+  <input type="text" name="flightNo" value="12" />
+  <label for="">Departing time</label>
+  <input type="datetime-local" name="departs" value="<%=departsDate%>" />
+
+  <input type="submit" value="ADD Flight" class="red" />
+</form>
+
+<%- include('../partials/footer') %>

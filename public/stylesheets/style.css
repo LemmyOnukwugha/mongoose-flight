@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.header {
+  height: 100px;
+  background-color: rgb(48, 48, 48);
+  color: aliceblue;
+  text-align: center;
+  margin: auto;
+}
+
+h2 {
+  color: brown;
+  padding: 10px;
+}
+
+h3 {
+  padding: 10px;
+}
+
+a {
+  color: rgb(3, 1, 1);
+  color: white;
+  text-decoration: none;
+}
+
+table {
+  margin: 10px;
+  border: 0;
+  border-collapse: collapse;
+  width: 700px;
+}
+
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+label {
+  padding: 10px;
+}
+.addTicket {
+  width: 150px;
+  height: 40px;
+  background-color: brown;
+  color: aliceblue;
+}
+
+.menubar {
+  height: 60px;
+  background-color: rgb(96, 96, 96);
+  color: white;
+  text-align: center;
+}
+
+.flightDetail_lable {
+  color: gray;
+}
+
+.flightListHeader {
+  background-color: rgb(96, 96, 96);
+  color: white;
+  height: 30px;
+}
+
+.flightRow {
+  background-color: rgb(210, 211, 211);
+  color: rgb(3, 2, 2);
+  height: 30px;
+  border-bottom: 1px solid gray;
+}
+
+#detailLink {
+  color: rgb(218, 216, 216);
+}
+
+.red {
+  background-color: brown;
+  color: floralwhite;
+  height: 30px;
+  width: 120px;
+}
+
+.gridContainerAddFlight {
+  display: grid;
+  grid-template-columns: 150px 1fr 3fr;
+  grid-gap: 10px;
+}
+
+.gridContainerAddFlight label {
+  grid-column: 1 / 2;
+}
+
+.gridContainerAddFlight input {
+  grid-column: 2 / 3;
+}

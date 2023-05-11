@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+<h2>Departing Flight</h2>
+<%if (flights.length > 0) {%>
+<table>
+  <tr class="flightListHeader">
+    <th>Alirline</th>
+    <th>Airport</th>
+    <th>Flight Nunmber</th>
+    <th>Departing time</th>
+    <th>Detail</th>
+    <th>Action</th>
+  </tr>
+
+  <%flights.forEach (function(f) {%>
+  <tr class="flightRow">
+    <td><%=f.airline%></td>
+    <td><%=f.airport%></td>
+    <td><%=f.flightNo%></td>
+    <td><%=f.departs%></td>
+    <td class="red">
+      <a href="/flights/<%=f._id%>" id="detailLink">Flight Details</a>
+    </td>
+    <td>
+      <form
+        action="/flights/deleteFlight/<%=f._id%>?_method=DELETE"
+        method="POST"
+      >
+        <button type="submit" class="addTicket" style="width: 80px">
+          Delete
+        </button>
+      </form>
+    </td>
+  </tr>
+  <%})%>
+</table>
+<%} else {%>
+<div>No flight yet </div>
+<% } %> 
+<%- include('../partials/footer') %> </No>
